@@ -1,34 +1,34 @@
 ---
 import Reveal from "../animations/Reveal.astro";
 
-const prices = [
-    { name: "Aplicação", value: "R$ 195,00" },
-    { name: "Manutenção", value: "R$ 150,00" },
+const areas = [
+    { name: "Psicanálise de Adultos", detail: "Atendimento Profundo" },
+    { name: "Psicodinâmica Infantil", detail: "Neurodivergentes & TEA" },
+    { name: "Transtornos de Humor", detail: "Depressão & Ansiedade" },
+    { name: "Terapia de Casal & Familiar", detail: "Suporte Sistêmico" },
+    { name: "Sexologia Clínica", detail: "Acompanhamento Especializado" },
 ];
 
-const additions = [
-    { name: "Esmaltação", value: "R$ 35,00" },
-    { name: "Pigmento", value: "R$ 30,00" },
-    { name: "Unha quebrada/reaplicar", value: "R$ 35,00" },
-    {
-        name: "Curativo cantinho comido ou danificado por lixa ou alicate",
-        value: "R$ 10,00",
-    },
+const differentials = [
+    { name: "Neurociência Aplicada", detail: "Rigor Técnico" },
+    { name: "Atendimento Online", detail: "Alcance Global" },
+    { name: "Atendimento Presencial", detail: "Araguari - MG" },
+    { name: "Abordagem Humanizada", detail: "Ética & Acolhimento" },
 ];
 ---
 
-<section id="pricing" class="py-24 bg-transparent">
+<section id="pricing" class="py-24 bg-transparent border-t border-white/5">
     <div class="container mx-auto px-6">
         <div class="max-w-3xl mx-auto">
             <Reveal direction="up">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-serif mb-4 text-brand">
-                        Investimento
+                        Áreas de Atuação
                     </h2>
                     <p
                         class="text-charcoal/60 uppercase tracking-widest text-xs"
                     >
-                        Tabela de Valores
+                        Especialidades e Enfoques Terapêuticos
                     </p>
                 </div>
             </Reveal>
@@ -48,17 +48,17 @@ const additions = [
                             <h3
                                 class="text-2xl font-serif text-white mb-8 border-b border-white/10 pb-4 inline-block"
                             >
-                                Valores
+                                Especialidades
                             </h3>
                             <div class="space-y-6">
                                 {
-                                    prices.map((item) => (
+                                    areas.map((item) => (
                                         <div class="flex justify-between items-end border-b border-white/5 pb-2 hover:border-brand/30 transition-colors duration-300">
-                                            <span class="text-white/80 font-light">
+                                            <span class="text-white/80 font-light text-base md:text-lg">
                                                 {item.name}
                                             </span>
-                                            <span class="text-brand font-serif text-lg">
-                                                {item.value}
+                                            <span class="text-brand font-medium tracking-tight">
+                                                {item.detail}
                                             </span>
                                         </div>
                                     ))
@@ -70,17 +70,17 @@ const additions = [
                             <h3
                                 class="text-2xl font-serif text-white mb-8 border-b border-white/10 pb-4 inline-block"
                             >
-                                Adicionais
+                                Diferenciais
                             </h3>
                             <div class="space-y-6">
                                 {
-                                    additions.map((item) => (
+                                    differentials.map((item) => (
                                         <div class="flex justify-between items-end border-b border-white/5 pb-2 hover:border-brand/30 transition-colors duration-300">
-                                            <span class="text-white/80 font-light pr-4">
+                                            <span class="text-white/80 font-light pr-4 text-base md:text-lg">
                                                 {item.name}
                                             </span>
-                                            <span class="text-brand font-serif text-lg whitespace-nowrap">
-                                                {item.value}
+                                            <span class="text-brand font-medium tracking-tight whitespace-nowrap">
+                                                {item.detail}
                                             </span>
                                         </div>
                                     ))
@@ -92,35 +92,33 @@ const additions = [
                             class="mt-12 pt-8 border-t border-white/10 text-center space-y-6"
                         >
                             <div
-                                class="inline-block px-8 py-4 border-2 border-brand/40 bg-brand/10 rounded-sm shadow-[0_0_30px_rgba(192,138,126,0.15)]"
+                                class="inline-block px-8 py-4 border-2 border-brand/40 bg-brand/10 rounded-sm shadow-[0_0_30px_rgba(99,102,241,0.15)]"
                             >
                                 <p
                                     class="text-brand text-sm md:text-base uppercase tracking-[0.3em] font-bold"
                                 >
-                                    Não trabalhamos com unhas decoradas
+                                    Agende sua primeira sessão
                                 </p>
                                 <p
                                     class="text-white/60 text-[10px] uppercase tracking-widest mt-2 font-light"
                                 >
-                                    Foco exclusivo em naturalidade e
-                                    sofisticação
+                                    Acolhimento profissional e especializado
                                 </p>
                             </div>
 
                             <p
                                 class="text-white/40 text-xs italic leading-relaxed max-w-sm mx-auto pt-4"
                             >
-                                * Para remoção sem aviso prévio é cobrado preço
-                                de manutenção.
+                                * Os valores das sessões são informados durante o primeiro contato, respeitando a ética profissional e as particularidades de cada caso.
                             </p>
 
                             <div class="pt-4">
                                 <a
-                                    href={`https://wa.me/5527999717063?text=${encodeURIComponent("Olá! Vi a tabela de valores e gostaria de agendar um horário.")}`}
+                                    href={`https://wa.me/5534984036388?text=${encodeURIComponent("Olá Elizabeth! Gostaria de informações sobre valores e disponibilidade de horários.")}`}
                                     target="_blank"
                                     class="btn-premium inline-block px-12 py-4"
                                 >
-                                    Agendar meu horário
+                                    Entrar em contato
                                 </a>
                             </div>
                         </div>

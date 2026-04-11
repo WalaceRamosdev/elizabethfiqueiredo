@@ -48,8 +48,8 @@ export default function MobileMenu() {
 
     const links = [
         { name: 'Início', href: '/' },
-        { name: 'Serviços', href: '/#services' },
-        { name: 'Sobre', href: '/sobre' },
+        { name: 'Especialidades', href: '/#services' },
+        { name: 'Sobre', href: '/#about' },
     ];
 
     return (
@@ -74,7 +74,7 @@ export default function MobileMenu() {
                     >
                         <div className="flex justify-between items-center mb-16">
                             <span className="text-2xl font-serif text-charcoal tracking-tighter">
-                                Ateliê<span className="italic font-light">dasUnhas</span>
+                                Elizabeth<span className="italic font-light text-brand">Figueiredo</span>
                             </span>
                             <button
                                 onClick={() => setIsOpen(false)}
@@ -98,12 +98,13 @@ export default function MobileMenu() {
                                 </motion.a>
                             ))}
                             <motion.a
-                                href="/#services"
+                                href="https://wa.me/5534984036388"
+                                target="_blank"
                                 variants={itemVariants}
                                 onClick={() => setIsOpen(false)}
                                 className="bg-brand text-white text-center py-4 rounded-sm font-medium tracking-widest text-sm uppercase"
                             >
-                                Selecionar Serviço
+                                Agendar Consulta
                             </motion.a>
                         </nav>
 
@@ -111,13 +112,9 @@ export default function MobileMenu() {
                             variants={itemVariants}
                             className="mt-auto border-t border-charcoal/10 pt-8 flex gap-6"
                         >
-                            <a href="#" className="flex items-center gap-2 text-charcoal/60 hover:text-brand transition-colors">
-                                <Instagram size={20} />
-                                <span className="text-xs uppercase tracking-widest">Instagram</span>
-                            </a>
-                            <a href="https://wa.me/5527999717063" target="_blank" className="flex items-center gap-2 text-charcoal/60 hover:text-brand transition-colors">
+                            <a href="https://wa.me/5534984036388" target="_blank" className="flex items-center gap-2 text-charcoal/60 hover:text-brand transition-colors">
                                 <Phone size={20} />
-                                <span className="text-xs uppercase tracking-widest">(27) 99971-7063</span>
+                                <span className="text-xs uppercase tracking-widest">(34) 98403-6388</span>
                             </a>
                         </motion.div>
                     </motion.div>

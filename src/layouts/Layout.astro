@@ -16,12 +16,37 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta
             name="description"
-            content="Ateliê das Unhas - Estética e Bem-estar. Atendimento premium e especializado."
+            content="Elizabeth Figueiredo | Psicanalista e Neurocientista em Araguari MG. Especialista em terapia familiar, sexologia e atendimento a neurodivergentes (TEA). Agende sua consulta presencial ou online em Araguari."
         />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
+        <title>Elizabeth Figueiredo | Psicanalista em Araguari MG | Neurociência</title>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalBusiness",
+          "name": "Elizabeth Figueiredo | Psicanálise & Neurociência",
+          "alternateName": "Elizabeth Figueiredo Psicanalista",
+          "description": "Psicanalista e Neurocientista em Araguari, MG especializada em terapia familiar, sexologia e atendimento a neurodivergentes e TEA.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Araguari",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-18.6472",
+            "longitude": "-48.1872"
+          },
+          "url": "https://suapagina.com.br",
+          "telephone": "+5534984036388",
+          "priceRange": "$$",
+          "openingHours": "Mo-Fr 08:00-20:00",
+          "image": "https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=2070&auto=format&fit=crop"
+        }
+        </script>
         <ViewTransitions />
     </head>
     <body>

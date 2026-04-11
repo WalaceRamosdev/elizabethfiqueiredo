@@ -10,28 +10,28 @@ import trabalho4 from "../../assets/images/trabalho-4.jpeg";
 
 const galleryImages = [
     {
-        src: ambienteImg,
-        alt: "Ambiente sofisticado do Ateliê",
+        src: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=2069&auto=format&fit=crop",
+        alt: "Consultório Aconchegante",
         span: "md:col-span-2 md:row-span-2",
     },
     {
-        src: trabalho1,
-        alt: "Trabalho de Nail Art",
+        src: "https://images.unsplash.com/photo-1544640808-32ca72ac7f67?q=80&w=1935&auto=format&fit=crop",
+        alt: "Espaço de Reflexão",
         span: "md:col-span-1 md:row-span-1",
     },
     {
-        src: trabalho2,
-        alt: "Acabamento Impecável",
+        src: "https://images.unsplash.com/photo-1516302752625-fbc4c513f572?q=80&w=2070&auto=format&fit=crop",
+        alt: "Ambiente Sereno",
         span: "md:col-span-1 md:row-span-1",
     },
     {
-        src: trabalho4,
-        alt: "Elegância nas Unhas",
+        src: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=2070&auto=format&fit=crop",
+        alt: "Abordagem Neurocientífica",
         span: "md:col-span-1 md:row-span-2",
     },
     {
-        src: trabalho3,
-        alt: "Detalhes do Atendimento",
+        src: "https://images.unsplash.com/photo-1499209974431-9eaa37a11144?q=80&w=2072&auto=format&fit=crop",
+        alt: "Harmonia e Equilíbrio",
         span: "md:col-span-1 md:row-span-1",
     },
 ];
@@ -44,13 +44,13 @@ const galleryImages = [
                 <span
                     class="text-brand text-xs uppercase tracking-[0.5em] font-medium mb-4 block"
                 >
-                    Portfólio & Espaço
+                    Nosso Espaço
                 </span>
                 <h2
                     class="text-4xl md:text-5xl font-serif text-white leading-tight"
                 >
-                    Essência e <span class="italic text-brand-light"
-                        >Sofisticação</span
+                    Ambiente e <span class="italic text-brand-light"
+                        >Bem-Estar</span
                     >
                 </h2>
             </Reveal>
@@ -70,12 +70,11 @@ const galleryImages = [
                             className="h-full w-full"
                         >
                             <div class="h-full w-full overflow-hidden">
-                                <Image
-                                    src={image.src as any}
+                                <img
+                                    src={image.src}
                                     alt={image.alt}
                                     class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                     loading="lazy"
-                                    format="webp"
                                 />
                             </div>
 
