@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Reveal from "../components/animations/Reveal.astro";
+import profileImg from "../assets/images/foto2_final_totalmente_limpa.png";
+import { MessageCircle, Instagram, Globe, MapPin, Phone, Sparkles } from "lucide-react";
+
+const links = [
+    {
+        title: "Agendar Horário",
+        subtitle: "Fale diretamente pelo WhatsApp",
+        url: "https://wa.me/5534984036388",
+        icon: MessageCircle,
+        highlight: true
+    },
+    {
+        title: "Nosso Instagram",
+        subtitle: "Confira as novidades e trabalhos",
+        url: "https://instagram.com/sissarossi",
+        icon: Instagram
+    },
+    {
+        title: "Especialidades",
+        subtitle: "Conheça nossas abordagens",
+        url: "/#services",
+        icon: Sparkles
+    },
+    {
+        title: "Localização",
+        subtitle: "Atendimento em Araguari, MG",
+        url: "https://maps.google.com",
+        icon: MapPin
+    },
+    {
+        title: "Site Principal",
+        subtitle: "Voltar para o site oficial",
+        url: "/",
+        icon: Globe
+    }
+];
+---
+
+<Layout title="Conectar | Elizabeth Figueiredo">
+    <main class="min-h-screen pt-20 pb-12 flex flex-col items-center relative z-10">
+        <!-- Perfil Section -->
+        <div class="mb-12 text-center px-6 pt-4">
+            <Reveal direction="down" duration={1} delay={200}>
+                <div class="relative w-28 h-28 mx-auto mb-6 p-1 rounded-full border border-brand/30">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-brand shadow-[0_0_25px_rgba(192,138,126,0.1)]">
+                        <img 
+                            src={profileImg.src} 
+                            alt="Elizabeth Figueiredo" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-7 h-7 bg-brand rounded-full flex items-center justify-center border-2 border-[#0A0A0A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                </div>
+            </Reveal>
+
+            <Reveal direction="up" duration={1} delay={400}>
+                <h1 class="text-3xl font-serif text-white mb-2 tracking-tight">
+                    Elizabeth <span class="italic text-brand">Figueiredo</span>
+                </h1>
+                <p class="text-white/40 text-[10px] tracking-[0.3em] uppercase mb-4">
+                    Psicanálise Clínica & Saúde Mental
+                </p>
+                <div class="w-12 h-[1px] bg-brand/30 mx-auto"></div>
+            </Reveal>
+        </div>
+
+        <!-- Links Section -->
+        <div class="w-full max-w-[380px] px-6 space-y-4">
+            {links.map((link, index) => (
+                <Reveal direction="up" delay={500 + (index * 100)}>
+                    <a
+                        href={link.url}
+                        target={link.url.startsWith('http') ? "_blank" : "_self"}
+                        class:list={[
+                            "group block w-full p-4 rounded-sm border transition-all duration-500 relative overflow-hidden",
+                            link.highlight 
+                                ? "bg-brand border-brand text-white shadow-[0_10px_20px_rgba(192,138,126,0.15)]" 
+                                : "bg-white/[0.03] border-white/10 text-white/80 hover:bg-white/[0.07] hover:border-brand/40"
+                        ]}
+                    >
+                        <div class="relative z-10 flex items-center gap-4">
+                            <div class:list={[
+                                "w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110",
+                                link.highlight ? "bg-white/20" : "bg-brand/10 text-brand"
+                            ]}>
+                                <link.icon size={20} />
+                            </div>
+                            <div class="text-left">
+                                <span class="block text-sm font-medium tracking-wide">
+                                    {link.title}
+                                </span>
+                                <span class:list={[
+                                    "text-[10px] tracking-wider",
+                                    link.highlight ? "text-white/70" : "text-white/30"
+                                ]}>
+                                    {link.subtitle}
+                                </span>
+                            </div>
+                            <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class={link.highlight ? "text-white" : "text-brand"}><path d="m9 18 6-6-6-6"/></svg>
+                            </div>
+                        </div>
+                    </a>
+                </Reveal>
+            ))}
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-auto pt-20 pb-4 text-center">
+            <Reveal direction="up" delay={1400}>
+                <p class="text-[9px] uppercase tracking-[0.4em] text-white/20">
+                    &copy; 2026 Elizabeth Figueiredo. <br />
+                    Mente saudável, vida equilibrada.
+                </p>
+            </Reveal>
+        </footer>
+    </main>
+</Layout>
