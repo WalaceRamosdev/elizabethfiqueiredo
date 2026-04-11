@@ -1,0 +1,58 @@
+---
+import { MessageCircle } from "lucide-react";
+
+interface Props {
+    phone?: string;
+    message?: string;
+}
+
+const { 
+    phone = "5534984036388", 
+    message = "Olá Elizabeth! Gostaria de agendar uma consulta." 
+} = Astro.props;
+
+const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+---
+
+<a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float group"
+    aria-label="Fale conosco pelo WhatsApp"
+>
+    <!-- Background Rings for Animation -->
+    <div class="absolute inset-0 rounded-full bg-brand/30 animate-pulse opacity-75 group-hover:animate-none"></div>
+    
+    <!-- Main Button -->
+    <div class="relative w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(192,138,126,0.4)] border border-white/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+        <MessageCircle size={28} strokeWidth={2.5} className="drop-shadow-sm" />
+    </div>
+
+    {/* Label Floating (Desktop only) */}
+    <span class="absolute right-full mr-5 top-1/2 -translate-y-1/2 px-4 py-2 bg-[#111] border border-white/5 text-brand text-[10px] uppercase tracking-[0.2em] font-semibold rounded-sm whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-500 pointer-events-none hidden md:block shadow-2xl">
+        Conversar no WhatsApp
+    </span>
+</a>
+
+<style>
+    .whatsapp-float {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .whatsapp-float {
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+        
+        .whatsapp-float .relative {
+            width: 3.25rem;
+            height: 3.25rem;
+        }
+    }
+</style>

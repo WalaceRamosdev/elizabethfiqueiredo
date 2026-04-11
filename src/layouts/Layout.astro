@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import DynamicBackground from "../components/ui/DynamicBackground.astro";
+import WhatsAppFloat from "../components/ui/WhatsAppFloat.astro";
 
 interface Props {
     title: string;
@@ -52,6 +53,7 @@ const { title } = Astro.props;
     <body>
         <DynamicBackground />
         <slot />
+        <WhatsAppFloat />
 
         <script>
             import Lenis from "lenis";
