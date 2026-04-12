@@ -98,7 +98,7 @@ export default function MobileMenu() {
                                 </motion.a>
                             ))}
                             <motion.a
-                                href="https://wa.me/5534984036388"
+                                href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20seu%20site."
                                 target="_blank"
                                 variants={itemVariants}
                                 onClick={() => setIsOpen(false)}
@@ -112,7 +112,7 @@ export default function MobileMenu() {
                             variants={itemVariants}
                             className="mt-auto border-t border-charcoal/10 pt-8 flex gap-6"
                         >
-                            <a href="https://wa.me/5534984036388" target="_blank" className="flex items-center gap-2 text-charcoal/60 hover:text-brand transition-colors">
+                            <a href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20seu%20site." target="_blank" className="flex items-center gap-2 text-charcoal/60 hover:text-brand transition-colors">
                                 <Phone size={20} />
                                 <span className="text-xs uppercase tracking-widest">(34) 98403-6388</span>
                             </a>
