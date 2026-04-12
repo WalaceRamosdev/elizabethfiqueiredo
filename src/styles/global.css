@@ -17,8 +17,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  background-color: transparent;
+  min-height: 100%;
+  background-color: #050505;
   color: var(--charcoal);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -104,3 +104,19 @@ html.lenis {
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+/* Print Overrides */
+@media print {
+  html, body {
+    background-color: #050505 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .parallax-text, #bg-canvas, #spotlight, [class*="animate-silk"] {
+    display: none !important;
+    animation: none !important;
+  }
+  .fixed {
+    position: absolute !important;
+  }
+}

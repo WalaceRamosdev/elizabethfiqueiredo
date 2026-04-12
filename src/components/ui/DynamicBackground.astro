@@ -98,7 +98,13 @@
     gsap.registerPlugin(ScrollTrigger);
 
     // 1. Parallax Text Effect
+    const isPrintMode = new URLSearchParams(window.location.search).has('print');
+    
     document.querySelectorAll(".parallax-text").forEach((el) => {
+        if (isPrintMode) {
+            (el as HTMLElement).style.display = 'none';
+            return;
+        }
         const speed = parseFloat((el as HTMLElement).dataset.speed || "0.1");
         gsap.to(el, {
             y: (i, target) => -ScrollTrigger.maxScroll(window) * speed,

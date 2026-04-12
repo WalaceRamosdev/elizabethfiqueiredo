@@ -7,35 +7,39 @@ const whatsappNumber = "5534984036388";
 const services = [
     {
         title: "Psicanálise para Adultos",
+        category: "Equilíbrio Mental",
         description:
-            "Acompanhamento profundo para transtornos de ansiedade, depressão e processos de autoconhecimento.",
+            "Um espaço seguro e acolhedor para explorar suas emoções, tratar ansiedades e reencontrar seu propósito através de uma escuta profunda e sem julgamentos.",
         price: "Presencial & Online",
         icon: Brain,
-        message: "Olá Elizabeth! Vim através do seu site. Gostaria de informações sobre Psicanálise para Adultos.",
+        message: "Olá Elizabeth! Gostaria de agendar uma conversa sobre Psicanálise para Adultos.",
     },
     {
         title: "Neuropsicanálise Infantil",
+        category: "Desenvolvimento e TEA",
         description:
-            "Atendimento especializado para crianças neurodivergentes, TEA e outros transtornos do desenvolvimento.",
+            "Atendimento lúdico e especializado focado nas necessidades de crianças neurodivergentes, oferecendo suporte emocional e desenvolvimento cognitivo.",
         price: "Atendimento Especializado",
         icon: Heart,
-        message: "Olá Elizabeth! Vim através do seu site. Gostaria de informações sobre Atendimento Infantil (Neurodivergentes/TEA).",
+        message: "Olá Elizabeth! Gostaria de informações sobre o atendimento para meu filho(a).",
     },
     {
         title: "Terapia Familiar",
+        category: "Conexões e Vínculos",
         description:
-            "Mediação de conflitos, orientação parental e fortalecimento dos vínculos familiares em todas as fases.",
+            "Harmonização das relações familiares, mediação de conflitos e orientação parental para construir um ambiente de diálogo e compreensão mútua.",
         price: "Sessões Familiares",
         icon: Users,
-        message: "Olá Elizabeth! Vim através do seu site. Gostaria de informações sobre Terapia Familiar.",
+        message: "Olá Elizabeth! Gostaria de orientações sobre Terapia Familiar.",
     },
     {
         title: "Sexologia Clínica",
+        category: "Saúde e Bem-estar",
         description:
-            "Abordagem terapêutica especializada em questões de sexualidade e saúde emocional.",
+            "Abordagem sensível e ética para tratar questões da sexualidade humana, promovendo autoconhecimento, saúde e plenitude emocional.",
         price: "Consultoria Especializada",
         icon: Activity,
-        message: "Olá Elizabeth! Vim através do seu site. Gostaria de informações sobre Sexologia Clínica.",
+        message: "Olá Elizabeth! Gostaria de informações sobre Sexologia Clínica.",
     },
 ];
 
@@ -44,53 +48,71 @@ const getWhatsAppLink = (message: string) => {
 };
 ---
 
-<section id="services" class="bg-transparent py-24">
+<section id="services" class="relative py-24 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2 text-brand"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand/5 rounded-full blur-[80px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
+
     <div class="container mx-auto px-6">
-        <div class="mb-16">
+        <div class="max-w-3xl mb-20">
             <Reveal direction="left">
+                <span class="text-brand text-sm uppercase tracking-[0.3em] font-medium mb-4 block">Cuidado e Acolhimento</span>
                 <h2
-                    class="text-4xl md:text-5xl font-serif mb-6 leading-tight text-brand"
+                    class="text-4xl md:text-6xl font-serif mb-8 leading-tight text-white"
                 >
-                    Especialidades <br />
-                    <span class="italic text-white">Clínicas</span>
+                    Áreas de <span class="italic text-brand">Atuação</span>
                 </h2>
             </Reveal>
             <Reveal direction="left" delay={200}>
-                <p class="text-charcoal/85 font-normal mb-10 max-w-lg">
-                    Atendimento especializado com foco na saúde mental e bem-estar emocional. 
-                    Abordagem humanizada integrando Psicanálise e Neurociência.
+                <p class="text-charcoal/70 text-lg md:text-xl font-normal max-w-2xl leading-relaxed">
+                    Cada jornada é única. Ofereço um atendimento humanizado, 
+                    onde a escuta ativa e a ciência se encontram para promover a sua saúde mental.
                 </p>
             </Reveal>
         </div>
 
         <div
             id="service-cards"
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+            class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12"
         >
             {
                 services.map((service, index) => (
-                    <Reveal direction="up" delay={index * 200}>
-                        <div class="group h-full bg-[#111111] p-10 border border-white/5 hover:border-brand/30 transition-all duration-500 rounded-sm flex flex-col">
-                            <div class="mb-8 p-3 bg-brand/10 rounded-full w-fit group-hover:bg-brand group-hover:text-white transition-colors duration-500">
-                                <service.icon size={24} />
-                            </div>
-                            <h3 class="text-xl font-serif mb-4 text-white">
-                                {service.title}
-                            </h3>
-                            <p class="text-white/60 text-sm font-normal mb-6 flex-grow">
-                                {service.description}
-                            </p>
-                            <div class="mb-8 text-brand font-semibold">
-                                {service.price}
+                    <Reveal direction="up" delay={index * 150}>
+                        <div class="group relative flex flex-col h-full bg-white/[0.02] backdrop-blur-sm border border-white/10 p-8 md:p-12 hover:border-brand/40 transition-all duration-700 rounded-2xl overflow-hidden shadow-2xl">
+                            <!-- Glow effect on hover -->
+                            <div class="absolute -inset-px bg-gradient-to-br from-brand/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
+                            
+                            <div class="flex items-start justify-between mb-10">
+                                <div class="p-4 bg-brand/10 text-brand rounded-2xl group-hover:scale-110 group-hover:bg-brand group-hover:text-white transition-all duration-500 shadow-inner">
+                                    <service.icon size={32} />
+                                </div>
+                                <span class="text-[10px] uppercase tracking-widest text-brand/60 font-semibold border border-brand/20 px-3 py-1 rounded-full">
+                                    {service.category}
+                                </span>
                             </div>
 
-                            <a
-                                href={getWhatsAppLink(service.message)}
-                                target="_blank"
-                                class="w-full py-3 px-6 border border-brand/40 text-brand text-center text-xs uppercase tracking-widest hover:bg-brand hover:text-white transition-all duration-300 rounded-sm"
-                            >
-                                Selecionar
-                            </a>
+                            <h3 class="text-2xl md:text-3xl font-serif mb-6 text-white group-hover:text-brand transition-colors duration-500">
+                                {service.title}
+                            </h3>
+                            
+                            <p class="text-white/60 text-base md:text-lg leading-relaxed font-normal mb-8 flex-grow">
+                                {service.description}
+                            </p>
+
+                            <div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+                                <div class="text-sm font-medium text-white/40 italic">
+                                    {service.price}
+                                </div>
+                                
+                                <a
+                                    href={getWhatsAppLink(service.message)}
+                                    target="_blank"
+                                    class="group/btn inline-flex items-center gap-3 text-brand hover:text-white transition-all duration-300 font-medium"
+                                >
+                                    <span class="text-sm uppercase tracking-widest">Saiba Mais</span>
+                                    <div class="w-8 h-px bg-brand group-hover/btn:w-12 transition-all duration-300"></div>
+                                </a>
+                            </div>
                         </div>
                     </Reveal>
                 ))
@@ -100,18 +122,9 @@ const getWhatsAppLink = (message: string) => {
 </section>
 
 <style>
-    @keyframes pulse-slow {
-        0%,
-        100% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        50% {
-            transform: scale(1.05);
-            opacity: 0.8;
-        }
-    }
-    .animate-pulse-slow {
-        animation: pulse-slow 3s infinite ease-in-out;
+    /* Section specific styles if needed */
+    #services {
+        background: radial-gradient(circle at 50% 50%, rgba(10, 10, 10, 0) 0%, rgba(5, 5, 5, 1) 100%);
     }
 </style>
+
