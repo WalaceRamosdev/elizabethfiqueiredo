@@ -6,6 +6,13 @@ import { MessageCircle, Instagram, Globe, MapPin, Phone, Sparkles } from "lucide
 
 const links = [
     {
+        title: "🔥 MENTORIA MULHERES INTEIRAS",
+        subtitle: "Descubra sua missão e viva com impacto",
+        url: "/mentoria",
+        icon: Sparkles,
+        cta: true
+    },
+    {
         title: "Agendar Horário",
         subtitle: "Fale diretamente pelo WhatsApp",
         url: "https://wa.me/5534984036388?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20seu%20site.",
@@ -78,15 +85,17 @@ const links = [
                         target={link.url.startsWith('http') ? "_blank" : "_self"}
                         class:list={[
                             "group block w-full p-4 rounded-sm border transition-all duration-500 relative overflow-hidden",
-                            link.highlight 
-                                ? "bg-brand border-brand text-white shadow-[0_10px_20px_rgba(192,138,126,0.15)]" 
-                                : "bg-white/[0.03] border-white/10 text-white/80 hover:bg-white/[0.07] hover:border-brand/40"
+            link.cta 
+                ? "bg-gradient-to-r from-brand to-brand-dark border-brand-light text-white shadow-[0_10px_30px_rgba(184,68,68,0.25)]"
+                : link.highlight 
+                ? "bg-brand border-brand text-white shadow-[0_10px_20px_rgba(192,138,126,0.15)]" 
+                : "bg-white/[0.03] border-white/10 text-white/80 hover:bg-white/[0.07] hover:border-brand/40"
                         ]}
                     >
                         <div class="relative z-10 flex items-center gap-4">
                             <div class:list={[
                                 "w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110",
-                                link.highlight ? "bg-white/20" : "bg-brand/10 text-brand"
+                                link.cta || link.highlight ? "bg-white/20" : "bg-brand/10 text-brand"
                             ]}>
                                 <link.icon size={20} />
                             </div>
