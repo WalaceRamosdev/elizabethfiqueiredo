@@ -3,60 +3,56 @@ import Reveal from "../animations/Reveal.astro";
 import heroImg from "../../assets/images/foto2_final_totalmente_limpa.png";
 ---
 
-<section
-    class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
->
-    <!-- Background Image with Mask Reveal -->
-    <!-- Background Image with Mask Reveal -->
-    <div class="absolute inset-0 z-0">
-        <div class="hero-image-container w-full h-full overflow-hidden">
-            <img 
-                src={heroImg.src} 
-                alt="" 
-                class="w-full h-full object-cover object-top opacity-35 blur-[1px]"
-            />
-        </div>
-        <div
-            class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-[#050505]"
-        >
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <!-- Gradient background -->
+    <div class="absolute inset-0 z-0 bg-gradient-to-br from-[#050505] via-black to-premium-dark/80"></div>
+
+    <div class="container mx-auto px-6 relative z-10 w-full">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+            <!-- Texto -->
+            <div class="lg:w-1/2 lg:pr-12">
+                <Reveal delay={800} duration={1.2} className="overflow-hidden">
+                    <h1 class="text-5xl md:text-7xl font-serif mb-6 hero-title">
+                        Mente Saudável, <br />
+                        <span class="italic text-brand">vida equilibrada</span>
+                    </h1>
+                </Reveal>
+
+                <Reveal delay={1200} direction="up">
+                    <p class="text-base md:text-lg text-charcoal/80 max-w-xl mb-10 leading-relaxed">
+                        Elizabeth Figueiredo — Psicanalista Clínica e Especialista em Saúde Mental. Atendimento especializado em Araguari, MG e online.
+                    </p>
+                </Reveal>
+
+                <Reveal delay={1600} direction="up">
+                    <a
+                        href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20seu%20site."
+                        target="_blank"
+                        class="btn-premium inline-flex items-center gap-3 px-10 py-5 group"
+                    >
+                        Agende sua consulta
+                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </a>
+                </Reveal>
+            </div>
+
+            <!-- Foto -->
+            <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <Reveal direction="none" className="hero-image-container w-full max-w-lg">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-brand/10 blur-3xl rounded-full"></div>
+                        <img
+                            src={heroImg.src}
+                            alt="Elizabeth Figueiredo"
+                            class="relative w-full h-auto max-h-[85vh] object-contain"
+                        />
+                    </div>
+                </Reveal>
+            </div>
         </div>
     </div>
 
-    <div class="container mx-auto px-6 relative z-10 text-center">
-        <Reveal delay={800} duration={1.2} className="overflow-hidden">
-            <h1 class="text-6xl md:text-8xl font-serif mb-6 hero-title drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)]">
-                Mente Saudável, <br />
-                <span class="italic text-brand">vida equilibrada</span>
-            </h1>
-        </Reveal>
-
-        <Reveal delay={1200} direction="up">
-            <p
-                class="text-lg md:text-xl text-white max-w-2xl mx-auto mb-10 font-normal tracking-wide drop-shadow-xl bg-black/40 backdrop-blur-md py-4 px-6 rounded-lg border border-white/10"
-            >
-                Elizabeth Figueiredo — Psicanalista Clínica e Especialista em Saúde Mental. Atendimento especializado em Araguari, MG e online. Uma abordagem profunda para o seu desenvolvimento pessoal.
-            </p>
-        </Reveal>
-
-        <Reveal delay={1600} direction="up">
-            <a
-                href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20seu%20site."
-                target="_blank"
-                class="btn-premium inline-flex items-center gap-3 px-10 py-5 group"
-            >
-                Agende sua consulta
-                <span
-                    class="group-hover:translate-x-1 transition-transform duration-300"
-                    >→</span
-                >
-            </a>
-        </Reveal>
-    </div>
-
-    <!-- Decorative elements -->
-    <div
-        class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30"
-    >
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
         <div class="w-px h-12 bg-brand"></div>
     </div>
 </section>
@@ -76,17 +72,12 @@ import heroImg from "../../assets/images/foto2_final_totalmente_limpa.png";
     }
 
     .hero-image-container {
-        animation: image-reveal 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        animation: fade-in 1.5s ease-out forwards 0.5s;
+        opacity: 0;
     }
 
-    @keyframes image-reveal {
-        from {
-            clip-path: circle(0% at 50% 50%);
-            transform: scale(1.2);
-        }
-        to {
-            clip-path: circle(100% at 50% 50%);
-            transform: scale(1);
-        }
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
     }
 </style>

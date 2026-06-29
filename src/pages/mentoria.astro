@@ -1,0 +1,432 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/ui/Header.astro";
+import Reveal from "../components/animations/Reveal.astro";
+import CustomCursor from "../components/ui/CustomCursor.astro";
+---
+
+<Layout title="MMI | Mentoria Mulheres Inteiras">
+    <CustomCursor />
+    <Header />
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/60 to-[#050505]"></div>
+                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand/5 blur-[150px] rounded-full"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-brand/10 blur-[100px] rounded-full"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <Reveal delay={400} duration={1.2} className="overflow-hidden">
+                    <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-8 font-medium border border-brand/20 px-6 py-2 rounded-full">
+                        Vagas Limitadas — Inscreva-se Agora
+                    </span>
+                </Reveal>
+
+                <Reveal delay={600} duration={1.2} className="overflow-hidden">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif mb-4 leading-tight">
+                        <span class="text-charcoal">Você ainda vive</span><br />
+                        <span class="text-brand italic">fragmentada?</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-charcoal/80 max-w-3xl mx-auto mb-6 font-normal leading-relaxed">
+                        A MMI é um método de desenvolvimento feminino que integra mente e coração para ajudar mulheres como você a <strong class="text-brand">restaurarem sua identidade</strong>, descobrirem sua <strong class="text-brand">missão</strong> e gerarem <strong class="text-brand">impacto real</strong> em suas vidas.
+                    </p>
+                </Reveal>
+
+                <Reveal delay={1000} direction="up">
+                    <p class="text-base text-charcoal/60 max-w-2xl mx-auto mb-10 font-normal bg-black/30 backdrop-blur-md py-4 px-8 rounded-lg border border-white/5">
+                        <span class="text-brand font-medium">MMI</span> — Mente · Missão · Impacto
+                    </p>
+                </Reveal>
+
+                <Reveal delay={1200} direction="up">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20MMI%20-%20Mentoria%20Mulheres%20Inteiras."
+                            target="_blank"
+                            class="btn-premium inline-flex items-center gap-3 px-10 py-5 group text-base"
+                        >
+                            Quero ser inteira agora
+                            <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                        <span class="text-white/40 text-xs tracking-wider">ou continue lendo abaixo</span>
+                    </div>
+                </Reveal>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+                <div class="w-px h-12 bg-brand"></div>
+            </div>
+        </section>
+
+        <!-- O Problema Section -->
+        <section class="py-24 relative overflow-hidden bg-transparent">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <Reveal direction="up">
+                        <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">Você se identifica?</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-12">
+                            Você já se sentiu <span class="text-brand italic">assim?</span>
+                        </h2>
+                    </Reveal>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <Reveal direction="up" delay={100}>
+                            <div class="bg-premium-light/40 backdrop-blur-sm border border-white/5 p-6 rounded-sm hover:border-brand/20 transition-all duration-300">
+                                <p class="text-charcoal/80 text-sm leading-relaxed">"Sinto que estou perdida, sem saber qual é o meu propósito ou para onde estou indo."</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={200}>
+                            <div class="bg-premium-light/40 backdrop-blur-sm border border-white/5 p-6 rounded-sm hover:border-brand/20 transition-all duration-300">
+                                <p class="text-charcoal/80 text-sm leading-relaxed">"Minha mente está tão cheia de preocupações que não consigo tomar decisões com clareza."</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={300}>
+                            <div class="bg-premium-light/40 backdrop-blur-sm border border-white/5 p-6 rounded-sm hover:border-brand/20 transition-all duration-300">
+                                <p class="text-charcoal/80 text-sm leading-relaxed">"Vivo fragmentada entre o que sinto, o que penso e o que faço — parece que nada se encaixa."</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={400}>
+                            <div class="bg-premium-light/40 backdrop-blur-sm border border-white/5 p-6 rounded-sm hover:border-brand/20 transition-all duration-300">
+                                <p class="text-charcoal/80 text-sm leading-relaxed">"Quero gerar impacto, mas não sei por onde começar. Sinto que tenho um potencial imenso desperdiçado."</p>
+                            </div>
+                        </Reveal>
+                    </div>
+
+                    <Reveal direction="up" delay={500}>
+                        <p class="text-center text-charcoal/60 mt-10 text-sm italic">Se você respondeu "sim" a qualquer uma dessas frases, a MMI foi feita para você.</p>
+                    </Reveal>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Método Section -->
+        <section class="py-24 relative overflow-hidden bg-premium-light/30">
+            <div class="container mx-auto px-6 relative z-10">
+                <Reveal direction="up">
+                    <div class="text-center mb-16">
+                        <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">A Solução</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-4">
+                            O Método <span class="text-brand italic">MMI</span>
+                        </h2>
+                        <p class="text-charcoal/60 max-w-2xl mx-auto">
+                            Três pilares estruturados para reconstruir sua identidade por inteira
+                        </p>
+                    </div>
+                </Reveal>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <Reveal direction="up" delay={100}>
+                        <div class="group relative bg-premium-light/50 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:border-brand/30 transition-all duration-500 text-center">
+                            <div class="w-16 h-16 mx-auto mb-6 bg-brand/10 rounded-full flex items-center justify-center group-hover:bg-brand/20 transition-all duration-500">
+                                <span class="text-2xl font-serif text-brand font-bold">01</span>
+                            </div>
+                            <h3 class="text-2xl font-serif text-brand mb-4">🧠 Mente</h3>
+                            <p class="text-charcoal/70 leading-relaxed text-sm">
+                                Fortalecemos sua mente para que você possa pensar com clareza, tomar decisões
+                                conscientes e romper com padrões que já não servem mais. A mente é o ponto de
+                                partida para toda transformação.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <Reveal direction="up" delay={300}>
+                        <div class="group relative bg-premium-light/50 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:border-brand/30 transition-all duration-500 text-center">
+                            <div class="w-16 h-16 mx-auto mb-6 bg-brand/10 rounded-full flex items-center justify-center group-hover:bg-brand/20 transition-all duration-500">
+                                <span class="text-2xl font-serif text-brand font-bold">02</span>
+                            </div>
+                            <h3 class="text-2xl font-serif text-brand mb-4">🎯 Missão</h3>
+                            <p class="text-charcoal/70 leading-relaxed text-sm">
+                                Descubra sua missão de vida. Aquilo que dá propósito, significado e direção.
+                                Quando uma mulher conhece sua missão, ela desperta sua força interior e passa a
+                                viver com intencionalidade.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <Reveal direction="up" delay={500}>
+                        <div class="group relative bg-premium-light/50 backdrop-blur-sm border border-white/10 p-10 rounded-sm hover:border-brand/30 transition-all duration-500 text-center">
+                            <div class="w-16 h-16 mx-auto mb-6 bg-brand/10 rounded-full flex items-center justify-center group-hover:bg-brand/20 transition-all duration-500">
+                                <span class="text-2xl font-serif text-brand font-bold">03</span>
+                            </div>
+                            <h3 class="text-2xl font-serif text-brand mb-4">✨ Impacto</h3>
+                            <p class="text-charcoal/70 leading-relaxed text-sm">
+                                Uma mulher inteira gera impacto. Transforma sua família, sua comunidade e o
+                                mundo ao seu redor. O impacto é a consequência natural de uma mente fortalecida
+                                e uma missão vivida.
+                            </p>
+                        </div>
+                    </Reveal>
+                </div>
+
+                <Reveal direction="up" delay={700}>
+                    <div class="text-center mt-12">
+                        <a
+                            href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20MMI%20-%20Mentoria%20Mulheres%20Inteiras."
+                            target="_blank"
+                            class="btn-premium inline-flex items-center gap-3 px-8 py-4 group"
+                        >
+                            Quero reconstruir minha identidade
+                            <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </Reveal>
+            </div>
+        </section>
+
+        <!-- O que você vai receber Section -->
+        <section class="py-24 relative overflow-hidden bg-transparent">
+            <div class="container mx-auto px-6 relative z-10">
+                <Reveal direction="up">
+                    <div class="text-center mb-16">
+                        <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">O Pacote Completo</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-4">
+                            O que você vai <span class="text-brand italic">receber</span>
+                        </h2>
+                        <p class="text-charcoal/60 max-w-xl mx-auto">
+                            Tudo o que você precisa para se reconstruir por inteira
+                        </p>
+                    </div>
+                </Reveal>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <Reveal direction="up" delay={100}>
+                        <div class="text-center group">
+                            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center group-hover:bg-brand/20 group-hover:border-brand/40 transition-all duration-500">
+                                <svg class="w-10 h-10 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-serif text-brand mb-3">Encontros de Conexão</h3>
+                            <p class="text-sm text-charcoal/60 leading-relaxed max-w-xs mx-auto">
+                                Sessões ao vivo para conexão profunda, compartilhamento de experiências e construção de vínculo entre as participantes.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <Reveal direction="up" delay={300}>
+                        <div class="text-center group">
+                            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center group-hover:bg-brand/20 group-hover:border-brand/40 transition-all duration-500">
+                                <svg class="w-10 h-10 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-serif text-brand mb-3">Encontros Online</h3>
+                            <p class="text-sm text-charcoal/60 leading-relaxed max-w-xs mx-auto">
+                                Aulas e encontros virtuais para aprendizado constante, com conteúdo estruturado e suporte contínuo.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <Reveal direction="up" delay={500}>
+                        <div class="text-center group">
+                            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center group-hover:bg-brand/20 group-hover:border-brand/40 transition-all duration-500">
+                                <svg class="w-10 h-10 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-serif text-brand mb-3">Material Didático</h3>
+                            <p class="text-sm text-charcoal/60 leading-relaxed max-w-xs mx-auto">
+                                Conteúdo exclusivo, exercícios práticos e materiais de apoio para aprofundar seu desenvolvimento.
+                            </p>
+                        </div>
+                    </Reveal>
+                </div>
+            </div>
+        </section>
+
+        <!-- Para quem é Section -->
+        <section class="py-24 relative overflow-hidden bg-premium-light/30">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <Reveal direction="left">
+                            <div class="bg-premium-light/50 backdrop-blur-sm border border-white/10 p-8 md:p-12 rounded-sm">
+                                <h2 class="text-3xl md:text-4xl font-serif text-brand mb-8">
+                                    Esta mentoria é para você que:
+                                </h2>
+                                <ul class="space-y-5">
+                                    <li class="flex items-start gap-4">
+                                        <span class="w-6 h-6 bg-brand/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-brand text-xs">✓</span>
+                                        </span>
+                                        <p class="text-charcoal/80 text-sm leading-relaxed">Deseja se reconectar com sua essência e se sentir inteira novamente</p>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <span class="w-6 h-6 bg-brand/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-brand text-xs">✓</span>
+                                        </span>
+                                        <p class="text-charcoal/80 text-sm leading-relaxed">Busca clareza mental e emocional para tomar decisões com confiança</p>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <span class="w-6 h-6 bg-brand/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-brand text-xs">✓</span>
+                                        </span>
+                                        <p class="text-charcoal/80 text-sm leading-relaxed">Quer descobrir seu propósito e viver uma vida com significado</p>
+                                    </li>
+                                    <li class="flex items-start gap-4">
+                                        <span class="w-6 h-6 bg-brand/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <span class="text-brand text-xs">✓</span>
+                                        </span>
+                                        <p class="text-charcoal/80 text-sm leading-relaxed">Está pronta para sair da fragmentação e gerar impacto em sua vida e no mundo</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </Reveal>
+                    </div>
+
+                    <div class="lg:w-1/2">
+                        <Reveal direction="right">
+                            <div class="relative">
+                                <div class="relative z-10">
+                                    <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">É para você?</span>
+                                    <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-6">
+                                        Sua jornada para se tornar <br />
+                                        <span class="text-brand italic">completa</span>
+                                    </h2>
+                                    <p class="text-charcoal/70 leading-relaxed mb-8">
+                                        Você não precisa mais viver fragmentada. A MMI é o caminho para reconstruir
+                                        sua identidade, fortalecer sua mente e descobrir a missão que vai te levar
+                                        a uma vida de impacto.
+                                    </p>
+                                    <a
+                                        href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20MMI%20-%20Mentoria%20Mulheres%20Inteiras."
+                                        target="_blank"
+                                        class="btn-premium inline-flex items-center gap-3 px-8 py-4 group"
+                                    >
+                                Sim, quero me inscrever
+                                <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                            </a>
+                                </div>
+                            </div>
+                        </Reveal>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que MMI Section -->
+        <section class="py-24 relative overflow-hidden bg-transparent">
+            <div class="container mx-auto px-6 relative z-10">
+                <Reveal direction="up">
+                    <div class="text-center mb-16">
+                        <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">A Diferença</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-4">
+                            Por que escolher a <span class="text-brand italic">MMI</span>
+                        </h2>
+                    </div>
+                </Reveal>
+
+                <div class="max-w-4xl mx-auto">
+                    <Reveal direction="up" delay={100}>
+                        <div class="bg-premium-light/40 backdrop-blur-sm border border-white/5 p-8 md:p-10 rounded-sm mb-6">
+                            <p class="text-charcoal/80 leading-relaxed mb-4">
+                                Muitas mulheres vivem <strong class="text-charcoal">fragmentadas</strong>, divididas entre
+                                o que sentem, o que pensam e o que fazem. A MMI existe para te ajudar a
+                                <strong class="text-brand">reconstruir sua identidade por inteira</strong>.
+                            </p>
+                            <p class="text-charcoal/80 leading-relaxed">
+                                Não se trata apenas de autoconhecimento — trata-se de <strong class="text-charcoal">transformação real</strong>.
+                                De deixar de ser fragmentada para se tornar inteira. De fortalecer sua mente,
+                                encontrar sua missão e viver uma vida de impacto.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                        <Reveal direction="up" delay={200}>
+                            <div class="border-l-2 border-brand/40 pl-6 py-4 bg-premium-light/30 backdrop-blur-sm rounded-r-md hover:border-brand transition-all duration-300">
+                                <h4 class="text-lg font-serif text-brand mb-1">Reconstrução da Identidade</h4>
+                                <p class="text-sm text-charcoal/60">Um mergulho profundo no seu eu interior para redescobrir quem você realmente é.</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={300}>
+                            <div class="border-l-2 border-brand/40 pl-6 py-4 bg-premium-light/30 backdrop-blur-sm rounded-r-md hover:border-brand transition-all duration-300">
+                                <h4 class="text-lg font-serif text-brand mb-1">Fortalecimento Mental</h4>
+                                <p class="text-sm text-charcoal/60">Ferramentas práticas para desenvolver resiliência, clareza e equilíbrio emocional.</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={400}>
+                            <div class="border-l-2 border-brand/40 pl-6 py-4 bg-premium-light/30 backdrop-blur-sm rounded-r-md hover:border-brand transition-all duration-300">
+                                <h4 class="text-lg font-serif text-brand mb-1">Descoberta da Missão</h4>
+                                <p class="text-sm text-charcoal/60">Encontre seu propósito e viva com direção, significado e intencionalidade.</p>
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={500}>
+                            <div class="border-l-2 border-brand/40 pl-6 py-4 bg-premium-light/30 backdrop-blur-sm rounded-r-md hover:border-brand transition-all duration-300">
+                                <h4 class="text-lg font-serif text-brand mb-1">Vida de Impacto</h4>
+                                <p class="text-sm text-charcoal/60">Transforme sua realidade e impacte positivamente tudo ao seu redor.</p>
+                            </div>
+                        </Reveal>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Por que MMI Section (repetida para conversão) -->
+        <section class="py-24 relative overflow-hidden bg-premium-light/30">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <Reveal direction="up">
+                        <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-brand/70 mb-4 font-medium">A Transformação</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-charcoal leading-tight mb-6">
+                            O que muda com a <span class="text-brand italic">MMI</span>
+                        </h2>
+                    </Reveal>
+                    <Reveal direction="up" delay={100}>
+                        <p class="text-charcoal/70 leading-relaxed max-w-2xl mx-auto">
+                        Você sai dessa mentoria com sua <strong class="text-charcoal">mente fortalecida</strong>, 
+                        sua <strong class="text-charcoal">missão clara</strong> e pronta para gerar 
+                        <strong class="text-charcoal">impacto real</strong>. 
+                        Não é apenas autoconhecimento — é <strong class="text-brand">transformação verdadeira</strong>.
+                        </p>
+                    </Reveal>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-24 bg-brand text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 blur-[100px] rounded-full"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <Reveal direction="up">
+                    <span class="inline-block text-[10px] uppercase tracking-[0.3em] text-white/60 mb-6 font-medium border border-white/20 px-6 py-2 rounded-full">
+                        Últimas Vagas
+                    </span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight">
+                        Chegou a hora de ser <br />
+                        <span class="italic">inteira</span>
+                    </h2>
+                    <p class="text-white/85 mb-4 max-w-lg mx-auto font-normal leading-relaxed">
+                        Sua mente fortalecida, sua missão clara, seu impacto real. 
+                        Dê o primeiro passo para reconstruir sua identidade.
+                    </p>
+                    <p class="text-white/70 mb-10 text-sm">
+                        ⏳ Vagas limitadas — Mentoria exclusiva para mulheres
+                    </p>
+                    <a
+                        href="https://wa.me/5534984036388?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20MMI%20-%20Mentoria%20Mulheres%20Inteiras."
+                        target="_blank"
+                        class="inline-block px-12 py-5 border-2 border-white text-white hover:bg-white hover:text-brand transition-all duration-500 rounded-sm text-base font-medium tracking-wide"
+                    >
+                        Garantir minha vaga agora
+                    </a>
+                </Reveal>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-transparent border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-white/40 text-[10px] uppercase tracking-widest leading-relaxed">
+                &copy; 2026 MMI · Mentoria Mulheres Inteiras. Todos os direitos reservados.
+                <br />
+                Desenvolvido com excelência por <a href="https://www.sitesalphacode.com.br/solucoes/psicologos" target="_blank" rel="noopener" title="Criação de Sites para Psicólogos" class="hover:text-white transition-colors font-medium">Sites Alpha Code</a>
+            </p>
+        </div>
+    </footer>
+</Layout>

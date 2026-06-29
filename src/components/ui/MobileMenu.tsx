@@ -48,6 +48,7 @@ export default function MobileMenu() {
 
     const links = [
         { name: 'Início', href: '/' },
+        { name: 'Mentoria', href: '/mentoria' },
         { name: 'Especialidades', href: '/#services' },
         { name: 'Sobre', href: '/#about' },
     ];
